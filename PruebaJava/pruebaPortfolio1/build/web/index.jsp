@@ -18,13 +18,13 @@
         </form>
         
         <h1>Mostrar Historial Academico</h1>
-        <form action="" method="">
+        <form action="SvEducacion" method="GET">
             <button type="submit" >Mostrar </button>
         </form>
         
         <h1>Eliminar Dato</h1>
         <p>Ingresar id</p>
-        <form action="" method="">
+        <form action="SvElimianr" method="POST">
             <p><label>Id: </label><input type="text" name="id_elim"></p>
             <button type="submit" >Eliminar </button>
         </form>

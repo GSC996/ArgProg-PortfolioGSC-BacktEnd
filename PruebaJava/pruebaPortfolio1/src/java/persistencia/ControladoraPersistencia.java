@@ -23,7 +23,7 @@ public class ControladoraPersistencia {
         }
     }
     
-    public void eliminar(Educacion edu){
+    public void eliminarEdu(Educacion edu){
         try {
             eduJPA.destroy(edu.getId());
         } catch (NonexistentEntityException ex) {

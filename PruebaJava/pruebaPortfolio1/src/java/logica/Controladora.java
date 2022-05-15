@@ -22,4 +22,4 @@ public class Controladora {
     
     public List<Educacion> traerEducacion(){
         return controlPersis.traerEducacion();
-}
+}}
