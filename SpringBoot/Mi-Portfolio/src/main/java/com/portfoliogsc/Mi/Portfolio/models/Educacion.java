@@ -26,18 +26,18 @@ public class Educacion {
     private String fecha_inicio;
     private String fecha_fin;
 
-    private String imgen_logoInst;
+    private String imagen_logoInst;
 
     public Educacion() {
     }
 
-    public Educacion(Long idEdu, String institucion, String titulo, String fecha_inicio, String fecha_fin, String imgen_logoInst) {
+    public Educacion(Long idEdu, String institucion, String titulo, String fecha_inicio, String fecha_fin, String imagen_logoInst) {
         this.idEdu = idEdu;
         this.institucion = institucion;
         this.titulo = titulo;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
-        this.imgen_logoInst = imgen_logoInst;
+        this.imagen_logoInst = imagen_logoInst;
     }
     
 }

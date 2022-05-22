@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Persona implements Serializable {
@@ -45,18 +43,18 @@ public class Persona implements Serializable {
     private String foto_perfil;
 
     private String foto_portada;
-    
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idEdu")
-    private List <Educacion> educacionList;
+    private List<Educacion> educacionList;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
-    private List <Experiencia> experienciaList;
-    
+    private List<Experiencia> experienciaList;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkill")
-    private List <Skills> skillsList;
-    
+    private List<Skills> skillsList;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idProy")
-    private List <Proyectos> proyectosList;
+    private List<Proyectos> proyectosList;
 
     public Persona() {
     }
@@ -153,6 +151,5 @@ public class Persona implements Serializable {
     public void setExperienciaList(List<Experiencia> experienciaList) {
         this.experienciaList = experienciaList;
     }
-    
-    
+
 }

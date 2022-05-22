@@ -19,7 +19,7 @@ public class Skills {
     @NotNull
     private String nombreSkill;
     
-    private String imgenSkill;
+    private String imagenSkill;
     
     private int porcentaje;
 
@@ -29,7 +29,7 @@ public class Skills {
     public Skills(Long idSkill, String nombreSkill, String imgenSkill, int porcentaje) {
         this.idSkill = idSkill;
         this.nombreSkill = nombreSkill;
-        this.imgenSkill = imgenSkill;
+        this.imagenSkill = imgenSkill;
         this.porcentaje = porcentaje;
     }
 

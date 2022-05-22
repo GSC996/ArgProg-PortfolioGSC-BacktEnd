@@ -28,19 +28,19 @@ public class Experiencia {
     private String fecha_inicio;
     private String fecha_fin;
 
-    private String imgen_logoEmp;
+    private String imagen_logoEmp;
 
     public Experiencia() {
     }
 
-    public Experiencia(Long idExp, String empresa, String cargo, String descripcion, String fecha_inicio, String fecha_fin, String imgen_logoEmp) {
+    public Experiencia(Long idExp, String empresa, String cargo, String descripcion, String fecha_inicio, String fecha_fin, String imagen_logoEmp) {
         this.idExp = idExp;
         this.empresa = empresa;
         this.cargo = cargo;
         this.descripcion = descripcion;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
-        this.imgen_logoEmp = imgen_logoEmp;
+        this.imagen_logoEmp = imagen_logoEmp;
     }
 
 }
