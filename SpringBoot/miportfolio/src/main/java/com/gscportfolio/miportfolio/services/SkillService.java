@@ -19,7 +19,7 @@ public class SkillService {
         this.skillsRepo = skillsRepo;
     }
 
-    public Skill addSkills(Skill skill) {
+    public Skill addSkill(Skill skill) {
         return skillsRepo.save(skill);
     }
 
@@ -27,15 +27,15 @@ public class SkillService {
         return skillsRepo.findAll();
     }
 
-    public Skill editSkills(Skill skill) {
+    public Skill editSkill(Skill skill) {
         return skillsRepo.save(skill);
     }
 
-    public void deleteSkills(Long id) {
+    public void deleteSkill(Long id) {
         skillsRepo.deleteById(id);
     }
 
-    public Skill findProyectosById(Long id) {
+    public Skill findSkillById(Long id) {
         return skillsRepo.findById(id).orElseThrow(() -> new UserNotFoundException("No encontrado"));
     }
 }
