@@ -35,7 +35,7 @@ public class SkillController {
         return new ResponseEntity<>(nuevoSkill, HttpStatus.OK);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarSkill(@PathVariable("id") Long id) {
         skillService.deleteSkill(id);
         return new ResponseEntity<>(HttpStatus.OK);

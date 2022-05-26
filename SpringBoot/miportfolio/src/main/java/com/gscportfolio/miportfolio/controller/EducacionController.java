@@ -35,7 +35,7 @@ public class EducacionController {
         return new ResponseEntity<>(nuevaEducacion, HttpStatus.OK);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarEducacion(@PathVariable("id") Long id) {
         educacionService.deleteEducacion(id);
         return new ResponseEntity<>(HttpStatus.OK);

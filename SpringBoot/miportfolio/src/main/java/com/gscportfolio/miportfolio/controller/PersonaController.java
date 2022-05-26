@@ -34,7 +34,7 @@ public class PersonaController {
         return new ResponseEntity<>(nuevaPersona, HttpStatus.OK);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarPersona(@PathVariable("id") Long id) {
         personaService.deletePersona(id);
         return new ResponseEntity<>(HttpStatus.OK);
