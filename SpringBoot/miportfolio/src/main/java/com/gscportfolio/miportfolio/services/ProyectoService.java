@@ -35,7 +35,7 @@ public class ProyectoService {
         proyectoRepo.deleteById(id);
     }
 
-    public Proyecto findProyectosById(Long id) {
+    public Proyecto findProyectoById(Long id) {
         return proyectoRepo.findById(id).orElseThrow(() -> new UserNotFoundException("No encontrado"));
     }
 }
