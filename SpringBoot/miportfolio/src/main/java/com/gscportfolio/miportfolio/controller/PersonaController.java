@@ -4,6 +4,7 @@ import com.gscportfolio.miportfolio.models.Persona;
 import com.gscportfolio.miportfolio.services.PersonaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,18 +23,21 @@ public class PersonaController {
         return new ResponseEntity<>(persona, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<Persona> editarPersona(@RequestBody Persona persona) {
         Persona updatePersona = personaService.editPersona(persona);
         return new ResponseEntity<>(updatePersona, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<Persona> crearPersona(@RequestBody Persona persona) {
         Persona nuevaPersona = personaService.addPersona(persona);
         return new ResponseEntity<>(nuevaPersona, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> borrarPersona(@PathVariable("id") Long id) {
         personaService.deletePersona(id);

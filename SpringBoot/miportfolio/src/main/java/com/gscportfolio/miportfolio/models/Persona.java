@@ -1,6 +1,7 @@
 package com.gscportfolio.miportfolio.models;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,8 +11,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Persona implements Serializable {
 
     @Id
@@ -29,8 +34,11 @@ public class Persona implements Serializable {
     private String ocupacion;
 
     @NotNull
-    private String fecha_nacimiento;
-
+    private Date fecha_nacimiento;
+    
+    @NotNull
+    private String locacion;
+    
     @NotNull
     private String email;
 
@@ -59,7 +67,7 @@ public class Persona implements Serializable {
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellido, String ocupacion, String fecha_nacimiento, String email, String telefono, String sobre_mi, String foto_perfil, String foto_portada) {
+    public Persona(Long id, String nombre, String apellido, String ocupacion, Date fecha_nacimiento, String email, String telefono, String sobre_mi, String foto_perfil, String foto_portada, List<Educacion> educacionList, List<Experiencia> experienciaList, List<Skill> skillList, List<Proyecto> proyectoList) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -70,88 +78,9 @@ public class Persona implements Serializable {
         this.sobre_mi = sobre_mi;
         this.foto_perfil = foto_perfil;
         this.foto_portada = foto_portada;
+        this.educacionList = educacionList;
+        this.experienciaList = experienciaList;
+        this.skillList = skillList;
+        this.proyectoList = proyectoList;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getOcupacion() {
-        return ocupacion;
-    }
-
-    public void setOcupacion(String ocupacion) {
-        this.ocupacion = ocupacion;
-    }
-
-    public String getFecha_nacimiento() {
-        return fecha_nacimiento;
-    }
-
-    public void setFecha_nacimiento(String fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getSobre_mi() {
-        return sobre_mi;
-    }
-
-    public void setSobre_mi(String sobre_mi) {
-        this.sobre_mi = sobre_mi;
-    }
-
-    public String getFoto_perfil() {
-        return foto_perfil;
-    }
-
-    public void setFoto_perfil(String foto_perfil) {
-        this.foto_perfil = foto_perfil;
-    }
-
-    public String getFoto_portada() {
-        return foto_portada;
-    }
-
-    public void setFoto_portada(String foto_portada) {
-        this.foto_portada = foto_portada;
-    }
-
-    
-
 }
